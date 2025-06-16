@@ -14,4 +14,4 @@ COPY . .
 
 EXPOSE 9500
 
-CMD ["uvicorn", "app.src.main:app", "--host", "0.0.0.0", "--port", "9500"]
+CMD ["python", "app/src/main.py"]

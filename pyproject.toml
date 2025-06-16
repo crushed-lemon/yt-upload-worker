@@ -1,0 +1,12 @@
+[project]
+name = "yt-upload-worker"
+version = "0.1.0"
+description = "Workers who do the heavylifting of sticthing and HLS-slicing of large blobs"
+requires-python = ">=3.8"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["app/src"]

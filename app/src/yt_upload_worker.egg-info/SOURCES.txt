@@ -1,0 +1,9 @@
+pyproject.toml
+app/src/yt_upload_worker.egg-info/PKG-INFO
+app/src/yt_upload_worker.egg-info/SOURCES.txt
+app/src/yt_upload_worker.egg-info/dependency_links.txt
+app/src/yt_upload_worker.egg-info/top_level.txt
+app/src/accessors/__init__.py
+app/src/accessors/blobstoreaccessor.py
+app/src/accessors/cosmosaccessor.py
+app/src/yt_upload_worker.egg-info/SOURCES.txt
