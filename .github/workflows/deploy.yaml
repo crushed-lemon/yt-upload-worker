@@ -16,7 +16,7 @@ jobs:
 
       - name: Build image
         run: |
-          docker build yt-upload-worker:$NOW .
+          docker build -t yt-upload-worker:$NOW .
           docker tag yt-upload-worker:$NOW ytbackend.azurecr.io/yt-upload-worker:$NOW
 
       - name: Log into Azure
