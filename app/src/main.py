@@ -11,6 +11,7 @@ def main():
         receiver = service_bus_client.get_queue_receiver(queue_name="video-upload-completions")
         with receiver:
             for message in receiver.receive_messages(max_message_count=1, max_wait_time=300):
+                print("Received message: {}".format(message))
                 # acknowledge first, so that it is not processed again
                 receiver.complete_message(message)
                 # now process it

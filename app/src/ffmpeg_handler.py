@@ -3,9 +3,8 @@ import subprocess
 import tempfile
 import os
 
-def handle(upload_id):
-    # TODO : Add a SAS token at the end of this URL.
-    source_url = "https://ytstorage2.blob.core.windows.net/yt-video-raw/" + upload_id
+def handle(upload_id, sas_token):
+    source_url = "https://ytstorage2.blob.core.windows.net/yt-video-raw/" + upload_id + "?" + sas_token
     with tempfile.TemporaryDirectory() as output_dir:
         command = [
             "ffmpeg",

@@ -21,7 +21,7 @@ def process_message(message):
         chunks = upload_info.get("chunks")
         blobstoreaccessor.finish_raw_upload(upload_id, chunks)
         markVideo(upload_info, upload_info.get("_etag"), "STITCHED")
-        ffmpeg_handler.handle(upload_id)
+        ffmpeg_handler.handle(upload_id, blobstoreaccessor.generate_blob_sas(upload_id))
         upload_info = cosmosaccessor.read("uploads", upload_id)
         markVideo(upload_info, upload_info.get("_etag"), "COMPLETED")
         moveVideo(upload_info)
